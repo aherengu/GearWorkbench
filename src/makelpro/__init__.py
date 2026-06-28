@@ -1,0 +1,7 @@
+"""Public release package for Gearbox Design Workbench."""
+
+__all__ = [
+    "__version__",
+]
+
+__version__ = "1.13.4"

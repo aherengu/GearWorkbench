@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "makelpro-gearbox-workbench"
+version = "1.13.4"
+description = "Educational gearbox design GUI and supporting analysis helpers."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [
+  { name = "Zazu Nanami" },
+]
+dependencies = [
+  "matplotlib>=3.9",
+  "numpy>=2.0",
+  "PySide6>=6.7",
+]
+
+[project.scripts]
+gearbox-workbench = "makelpro.gearbox_gui:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/makelpro"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/makelpro/assets/gear.ico" = "makelpro/assets/gear.ico"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src",
+]
