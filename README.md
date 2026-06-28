@@ -47,7 +47,7 @@ uv run pytest -q
 ## Project Structure
 
 ```text
-public_release/
+GearWorkbench/
   README.md
   LICENSE
   .gitignore
